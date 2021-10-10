@@ -2,7 +2,7 @@ all: clean lint test bin
 
 clean:
 	@echo "Cleaning bin/..."
-	@rm -rf bin/*
+	@rm -rf bin
 
 dependencies:
 	@echo "Installing project dependencies..."
@@ -10,7 +10,7 @@ dependencies:
 
 bin:
 	@echo "Building go-life binary for use on local system..."
-	@go build -o bin/go-life main.go
+	@go build -o bin/go-life .
 
 lint:
 	@echo "Running linters..."
