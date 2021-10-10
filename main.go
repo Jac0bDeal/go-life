@@ -18,7 +18,7 @@ func main() {
 	terminal := output.NewTerminal()
 	defer terminal.Close()
 
-	world := life.NewRandomWorld(20, 20, 0.25)
+	world := life.NewRandomWorld(50, 50, 0.25)
 	err := terminal.Print(world.State())
 	if err != nil {
 		log.Fatalf("failed to write to terminal output: %v", err)
